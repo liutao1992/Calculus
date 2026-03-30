@@ -11,9 +11,7 @@ matplotlib.use('Agg')
 
 # 注册中文字体
 font_path = '/System/Library/Fonts/STHeiti Medium.ttc'
-font_manager.fontManager.addfont(font_path)
-prop = font_manager.FontProperties(fname=font_path)
-plt.rcParams['font.family'] = prop.get_name()
+font_prop = font_manager.FontProperties(fname=font_path)
 plt.rcParams['axes.unicode_minus'] = False
 
 fig, ax = plt.subplots(figsize=(12, 10))
@@ -47,27 +45,28 @@ ax.annotate(r'$\Delta x = x_2 - x_1 = 3$', xy=(2.5, 1.5), fontsize=12,
 ax.annotate(r'$\Delta y = y_2 - y_1 = 3$', xy=(5, 3.5), fontsize=12,
             bbox=dict(boxstyle='round', facecolor='lightyellow', alpha=0.8))
 
-# 公式框
+# 公式框 - 使用普通文本替代 LaTeX 的 \text{}
 textstr = '\n'.join([
-    r'$\text{两点式方程：}$',
+    '两点式方程：',
     r'$\frac{y - y_1}{y_2 - y_1} = \frac{x - x_1}{x_2 - x_1}$',
-    r'',
-    r'$\text{代入 } P_1(1,2), P_2(4,5):$',
+    '',
+    '代入 P1(1,2), P2(4,5):',
     r'$\frac{y - 2}{5 - 2} = \frac{x - 1}{4 - 1}$',
-    r'',
+    '',
     r'$\Rightarrow \frac{y - 2}{3} = \frac{x - 1}{3}$',
-    r'',
+    '',
     r'$\Rightarrow y = x + 1$',
 ])
 props = dict(boxstyle='round', facecolor='lightcyan', alpha=0.9, edgecolor='blue', linewidth=2)
 ax.text(0.02, 0.98, textstr, transform=ax.transAxes, fontsize=12,
-        verticalalignment='top', bbox=props, family='monospace')
+        verticalalignment='top', bbox=props, fontproperties=font_prop)
 
 # 斜率说明
 ax.text(0.5, -0.12,
-        r'$\text{斜率 } m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}$',
+        r'斜率 $m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}$',
         transform=ax.transAxes, fontsize=14, ha='center',
-        bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.8))
+        bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.8),
+        fontproperties=font_prop)
 
 ax.axhline(y=0, color='black', linewidth=0.5)
 ax.axvline(x=0, color='black', linewidth=0.5)
@@ -75,12 +74,12 @@ ax.set_xlim(-0.5, 6.5)
 ax.set_ylim(-1, 8)
 ax.set_xlabel('x', fontsize=14)
 ax.set_ylabel('y', fontsize=14)
-ax.set_title('两点式方程', fontsize=18, fontweight='bold')
+ax.set_title('两点式方程', fontsize=18, fontweight='bold', fontproperties=font_prop)
 ax.legend(loc='lower right', fontsize=12)
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('/Users/liutao/Documents/Obsidian/微积分/第一章函数图像和直线/imgs/two_point_form.png',
+plt.savefig('/Users/liutao/Documents/Obsidian/微积分/imgs/two_point_form.png',
             dpi=150, bbox_inches='tight')
 print("Saved: imgs/two_point_form.png")
 plt.close()
