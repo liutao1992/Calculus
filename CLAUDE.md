@@ -65,3 +65,15 @@ python3 *.py
 - 无需运行测试、构建或 lint 命令
 - 编辑时保持 Markdown 格式和 LaTeX 数学公式的正确性
 - 生成配图时优先使用虚拟环境中的 Python
+
+## matplotlib 配图经验
+
+### 中文字体显示问题
+**问题**：配图中使用 `family='monospace'`（等宽字体）导致中文无法显示。
+
+**原因**：等宽字体族不包含中文字体，matplotlib 会降级到默认字体但无法渲染中文。
+
+**教训**：
+- 绘制包含中文的文本时，**禁止使用** `family='monospace'`、`family='Courier'` 等等宽字体
+- 只使用 sans-serif 字体族（matplotlib 默认已配置 Hiragino Sans GB 等中文字体）
+- 如果需要等宽外观用于数学公式，使用 `family='serif'` 或不指定 family

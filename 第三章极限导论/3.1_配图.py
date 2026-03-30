@@ -83,8 +83,7 @@ def draw_function_with_hole():
         "即使 f(2) 无定义，极限依然存在！"
     )
     ax.text(0.5, 2.8, note_text, fontsize=11,
-           bbox=dict(boxstyle='round,pad=0.5', facecolor='lightyellow', edgecolor='orange'),
-           family='monospace')
+           bbox=dict(boxstyle='round,pad=0.5', facecolor='lightyellow', edgecolor='orange'))
 
     plt.tight_layout()
     plt.savefig('./imgs/3.1_图1_函数洞.png', dpi=150, bbox_inches='tight', facecolor='white')
