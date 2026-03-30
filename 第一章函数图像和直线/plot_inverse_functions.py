@@ -36,7 +36,7 @@ def plot_horizontal_line_test():
     ax1.set_ylim(-1, 10)
     ax1.set_xlabel('x', fontsize=12)
     ax1.set_ylabel('y', fontsize=12)
-    ax1.set_title(r'水平线检验：$f(x) = x^2$ (❌ 无反函数)', fontsize=14, color='red')
+    ax1.set_title(r'水平线检验：$f(x) = x^2$ (无反函数)', fontsize=14, color='red')
     ax1.legend(loc='upper right')
     ax1.grid(True, alpha=0.3)
     ax1.axhline(y=0, color='black', linewidth=0.5)
@@ -60,14 +60,14 @@ def plot_horizontal_line_test():
     ax2.set_ylim(-10, 10)
     ax2.set_xlabel('x', fontsize=12)
     ax2.set_ylabel('y', fontsize=12)
-    ax2.set_title(r'水平线检验：$f(x) = x^3$ (✅ 有反函数)', fontsize=14, color='green')
-    ax2.legend(loc='upper right')
+    ax2.set_title(r'水平线检验：$f(x) = x^3$ (有反函数)', fontsize=14, color='green')
+    ax2.legend(loc='lower right')
     ax2.grid(True, alpha=0.3)
     ax2.axhline(y=0, color='black', linewidth=0.5)
     ax2.axvline(x=0, color='black', linewidth=0.5)
 
     plt.tight_layout()
-    plt.savefig('/Users/liutao/Documents/Obsidian/微积分/第一章函数图像和直线/imgs/horizontal_line_test.png', dpi=150, bbox_inches='tight')
+    plt.savefig('/Users/liutao/Documents/Obsidian/微积分/imgs/horizontal_line_test.png', dpi=150, bbox_inches='tight')
     print("已保存: imgs/horizontal_line_test.png")
     plt.close()
 
@@ -108,14 +108,14 @@ def plot_restricted_domain():
     ax.set_ylim(-1, 10)
     ax.set_xlabel('x', fontsize=12)
     ax.set_ylabel('y', fontsize=12)
-    ax.set_title(r'限制定义域：$f(x) = x^2, x \geq 0$ (✅ 有反函数)', fontsize=14)
+    ax.set_title(r'限制定义域：$f(x) = x^2, x \geq 0$ (有反函数)', fontsize=14)
     ax.legend(loc='upper right')
     ax.grid(True, alpha=0.3)
     ax.axhline(y=0, color='black', linewidth=0.5)
     ax.axvline(x=0, color='black', linewidth=0.5)
 
     plt.tight_layout()
-    plt.savefig('/Users/liutao/Documents/Obsidian/微积分/第一章函数图像和直线/imgs/restricted_domain.png', dpi=150, bbox_inches='tight')
+    plt.savefig('/Users/liutao/Documents/Obsidian/微积分/imgs/restricted_domain.png', dpi=150, bbox_inches='tight')
     print("已保存: imgs/restricted_domain.png")
     plt.close()
 
@@ -179,7 +179,7 @@ def plot_inverse_symmetry():
     ax2.set_aspect('equal')
 
     plt.tight_layout()
-    plt.savefig('/Users/liutao/Documents/Obsidian/微积分/第一章函数图像和直线/imgs/inverse_symmetry.png', dpi=150, bbox_inches='tight')
+    plt.savefig('/Users/liutao/Documents/Obsidian/微积分/imgs/inverse_symmetry.png', dpi=150, bbox_inches='tight')
     print("已保存: imgs/inverse_symmetry.png")
     plt.close()
 

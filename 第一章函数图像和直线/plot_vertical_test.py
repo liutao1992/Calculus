@@ -55,7 +55,7 @@ ax2.set_ylim(-3, 3)
 ax2.set_xlabel('x', fontsize=13)
 ax2.set_ylabel('y', fontsize=13)
 ax2.set_title('圆: 不通过', fontsize=15, fontweight='bold', color='red', fontproperties=font_prop)
-ax2.legend(loc='upper right', fontsize=11)
+ax2.legend(loc='lower right', fontsize=11)
 ax2.grid(True, alpha=0.3)
 ax2.set_aspect('equal')
 

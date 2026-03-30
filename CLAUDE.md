@@ -22,11 +22,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **笔记格式**：Markdown，支持 LaTeX 数学公式（如 $f(x)$、$\mathbb{R}$）
 - **无构建系统**：纯静态 Markdown 文件，无需编译或构建
 - **版本控制**：通过 Git 进行版本管理（.git 目录已配置）
+- 数学公式必须使用LaTeX 
+- 配图中的文字必须使用中文
+- 在整理对应的章节内容 添加对应的配图 在绘制图片时 使用 matplotlib 绘制精美的插图
+- 再生成插图时 请使用虚拟环境 `/Users/liutao/Documents/Obsidian/微积分/.venv`
+- 插图统一放在`微积分/imgs`目录下
 
-## Obsidian Vault 配置
-
-- 配置文件位于父目录的 `.obsidian/` 文件夹中
-- 包含 appearance.json、core-plugins.json、workspace.json 等 Obsidian 配置
 
 ## 注意事项
 
