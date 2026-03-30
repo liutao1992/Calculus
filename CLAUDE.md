@@ -41,11 +41,14 @@ source /Users/liutao/Documents/Obsidian/微积分/.venv/bin/activate
 
 ### 运行配图生成脚本
 ```bash
-# 在对应章节目录下运行
-python3 *.py
+# 方法1：在对应章节目录下，激活虚拟环境后运行
+cd 第三章极限导论
+source /Users/liutao/Documents/Obsidian/微积分/.venv/bin/activate
+python3 3.2_配图.py
 
-# 或使用虚拟环境的 Python 完整路径
-/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3 *.py
+# 方法2：直接使用虚拟环境的 Python 完整路径（推荐）
+cd 第三章极限导论
+/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 3.2_配图.py
 ```
 
 ## 技术说明
@@ -59,12 +62,26 @@ python3 *.py
 - **无构建系统**：纯静态 Markdown 文件，无需编译或构建
 - **版本控制**：通过 Git 进行版本管理
 
-## 注意事项
+## 虚拟环境使用经验
 
-- 这是一个学习笔记仓库，不是软件项目
-- 无需运行测试、构建或 lint 命令
-- 编辑时保持 Markdown 格式和 LaTeX 数学公式的正确性
-- 生成配图时优先使用虚拟环境中的 Python
+### 虚拟环境信息
+- **位置**：`/Users/liutao/Documents/Obsidian/微积分/.venv`
+- **Python 版本**：3.13
+- **已安装包**：numpy, matplotlib
+
+### 常见问题
+
+**问题1：`source activate` 后 `python3` 仍用系统 Python**
+- **原因**：`activate` 脚本只修改 PATH，但系统 Python 可能优先级更高
+- **解决**：直接用完整路径 `/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13`
+
+**问题2：脚本中用相对路径，运行时找不到**
+- **原因**：相对路径基于当前工作目录，而非脚本所在位置
+- **解决**：先 `cd` 到正确目录再运行脚本
+
+**问题3：pip 安装的包 import 不到**
+- **原因**：虚拟环境不完整或 PATH 混乱
+- **解决**：用完整路径 `/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 -m pip install xxx`
 
 ## matplotlib 配图经验
 
