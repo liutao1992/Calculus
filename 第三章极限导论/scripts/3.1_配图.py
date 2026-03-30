@@ -86,7 +86,7 @@ def draw_function_with_hole():
            bbox=dict(boxstyle='round,pad=0.5', facecolor='lightyellow', edgecolor='orange'))
 
     plt.tight_layout()
-    plt.savefig('./imgs/3.1_图1_函数洞.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/3.1_图1_函数洞.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 3.1_图1_函数洞.png")
 
@@ -169,7 +169,7 @@ def draw_x_approaching():
     plt.suptitle(r'左右侧逼近：$lim_{x \to 2} f(x) = lim_{x \to 2^-} f(x) = lim_{x \to 2^+} f(x) = 1$',
                 fontsize=14, fontweight='bold', y=1.05)
     plt.tight_layout()
-    plt.savefig('./imgs/3.1_图2_左右逼近.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/3.1_图2_左右逼近.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 3.1_图2_左右逼近.png")
 
@@ -253,7 +253,7 @@ def draw_limit_existence():
 
     plt.suptitle('极限的三种情况', fontsize=15, fontweight='bold', y=1.02)
     plt.tight_layout()
-    plt.savefig('./imgs/3.1_图3_极限存在性.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/3.1_图3_极限存在性.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 3.1_图3_极限存在性.png")
 
@@ -315,7 +315,7 @@ def draw_dummy_variable():
                fontsize=14, fontweight='bold', pad=20)
 
     plt.tight_layout()
-    plt.savefig('./imgs/3.1_图4_虚拟变量.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/3.1_图4_虚拟变量.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 3.1_图4_虚拟变量.png")
 

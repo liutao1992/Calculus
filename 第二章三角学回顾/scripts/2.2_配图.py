@@ -74,7 +74,7 @@ def draw_four_quadrants():
     ax.set_title('四象限坐标系', fontsize=16, fontweight='bold', pad=20, fontproperties=zh_font)
 
     plt.tight_layout()
-    plt.savefig('./imgs/2.2_图1_四象限.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/2.2_图1_四象限.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 2.2_图1_四象限.png")
 
@@ -119,7 +119,7 @@ def draw_rotation_ray():
 
     plt.suptitle('旋转的物理意义: 站在原点, 转身, 沿直线走', fontsize=16, fontweight='bold', y=1.02, fontproperties=zh_font)
     plt.tight_layout()
-    plt.savefig('./imgs/2.2_图2_旋转射线.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/2.2_图2_旋转射线.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 2.2_图2_旋转射线.png")
 
@@ -187,7 +187,7 @@ def draw_any_angle_trig():
     ax.set_title('任意角三角函数定义: 以第三象限为例', fontsize=16, fontweight='bold', pad=20, fontproperties=zh_font)
 
     plt.tight_layout()
-    plt.savefig('./imgs/2.2_图3_任意角定义.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/2.2_图3_任意角定义.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 2.2_图3_任意角定义.png")
 
@@ -247,7 +247,7 @@ def draw_unit_circle_trig():
     ax.set_title('单位圆上的三角函数几何意义', fontsize=18, fontweight='bold', pad=20, fontproperties=zh_font)
 
     plt.tight_layout()
-    plt.savefig('./imgs/2.2_图4_单位圆三角函数.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/2.2_图4_单位圆三角函数.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 2.2_图4_单位圆三角函数.png")
 
@@ -296,7 +296,7 @@ def draw_trig_signs_quadrants():
     ax.set_title('四个象限中三角函数值的正负', fontsize=18, fontweight='bold', pad=20, fontproperties=zh_font)
 
     plt.tight_layout()
-    plt.savefig('./imgs/2.2_图5_象限符号.png', dpi=150, bbox_inches='tight', facecolor='white')
+    plt.savefig('../imgs/2.2_图5_象限符号.png', dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
     print("已生成: 2.2_图5_象限符号.png")
 

@@ -12,23 +12,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 微积分/
 ├── 第一章函数图像和直线/
 │   ├── imgs/            # 本章配图
+│   ├── scripts/         # 本章脚本
 │   ├── 1.1 函数.md
 │   ├── 1.2 反函数.md
-│   ├── 1.3 直线与一次函数.md
-│   └── *.py             # 本章配图生成脚本
+│   └── 1.3 直线与一次函数.md
 ├── 第二章三角学回顾/
-│   ├── imgs/            # 本章配图（如 2.2_图1_四象限.png）
+│   ├── imgs/            # 本章配图
+│   ├── scripts/         # 本章脚本
 │   ├── 2.1 基础知识.md
-│   ├── 2.2 扩展三角函数定义域.md
-│   ├── 2.1_配图.py      # 三角学配图生成脚本
-│   └── 2.2_配图.py      # 扩展三角函数配图生成脚本
+│   └── 2.2 扩展三角函数定义域.md
 └── 第三章极限导论/
-    ├── imgs/            # 本章配图（如 3.1_图1_函数洞.png）
+    ├── imgs/            # 本章配图
+    ├── scripts/         # 本章脚本
     ├── 3.1 极限：基本思想.md
-    └── 3.1_配图.py      # 极限配图生成脚本
+    └── 3.2 左极限和右极限.md
 ```
 
-**配图存储规则**：每个章节的配图统一存放在该章节的 `imgs/` 子目录下。
+**资源存储规则**：每个章节的配图和脚本统一存放在该章节目录下：
+- 配图：存放在章节的 `imgs/` 子目录下
+- 脚本：存放在章节目录下（如 `3.2_配图.py`）
 
 笔记按章节组织，每章包含多个主题的 Markdown 文件和对应的 Python 配图脚本。
 
@@ -42,12 +44,12 @@ source /Users/liutao/Documents/Obsidian/微积分/.venv/bin/activate
 ### 运行配图生成脚本
 ```bash
 # 方法1：在对应章节目录下，激活虚拟环境后运行
-cd 第三章极限导论
+cd 第三章极限导论/scripts
 source /Users/liutao/Documents/Obsidian/微积分/.venv/bin/activate
 python3 3.2_配图.py
 
 # 方法2：直接使用虚拟环境的 Python 完整路径（推荐）
-cd 第三章极限导论
+cd 第三章极限导论/scripts
 /Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 3.2_配图.py
 ```
 

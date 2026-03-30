@@ -53,7 +53,7 @@ ax.legend(loc='upper right', fontsize=11)
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('./imgs/3.2_图1_左右极限.png', dpi=150, bbox_inches='tight')
+plt.savefig('../imgs/3.2_图1_左右极限.png', dpi=150, bbox_inches='tight')
 plt.close()
 
 # ========== 图2: 极限存在与不存在对比 ==========
@@ -108,7 +108,7 @@ ax2.text(2, 3.7, r'$1 \neq 3 \Rightarrow \text{DNE}$',
 
 plt.suptitle('极限存在条件对比', fontsize=14, y=1.02)
 plt.tight_layout()
-plt.savefig('./imgs/3.2_图2_极限存在条件.png', dpi=150, bbox_inches='tight')
+plt.savefig('../imgs/3.2_图2_极限存在条件.png', dpi=150, bbox_inches='tight')
 plt.close()
 
 print("3.2 配图生成完成！")
