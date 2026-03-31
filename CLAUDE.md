@@ -96,3 +96,25 @@ cd 第三章极限导论/scripts
 - 绘制包含中文的文本时，**禁止使用** `family='monospace'`、`family='Courier'` 等等宽字体
 - 只使用 sans-serif 字体族（matplotlib 默认已配置 Hiragino Sans GB 等中文字体）
 - 如果需要等宽外观用于数学公式，使用 `family='serif'` 或不指定 family
+
+### LaTeX 分段函数标注问题
+**问题**：`ax.text()` 中使用 `\begin{cases}...\end{cases}` 导致 `ParseFatalException: Unknown symbol: \begin`
+
+**原因**：matplotlib 的文本渲染不支持 `cases` 环境
+
+**解决**：将分段函数展开为普通文本格式，例如：
+- ❌ `r'$f(x) = \begin{cases} x + 2 & x \neq 2 \\ 0 & x = 2 \end{cases}$'`
+- ✅ `r'$f(x) = x + 2 \ (x \neq 2),\ f(2) = 0$'`
+
+### 公式标注位置重叠问题
+**问题**：函数表达式标注与函数曲线重叠，或同一位置出现多个相同标注（重影）
+
+**原因1**：使用绝对坐标时，没考虑函数线位置，标注恰好落在函数线上
+
+**原因2**：同一标注写了两次（绝对坐标 + 相对坐标各一次），导致重叠
+
+**解决**：
+- 使用 `transform=ax.transAxes` 进行相对定位（0-1 范围）
+- 标注放在左上角 `ax.text(0.15, 0.92, ...)` 或右上角 `ax.text(0.85, 0.92, ...)`
+- **确保每个标注只写一次**，避免重复
+- 生成后检查配图是否清晰可读，必要时调整
