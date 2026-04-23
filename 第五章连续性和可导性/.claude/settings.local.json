@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/liutao/Documents/Obsidian/微积分/第五章连续性和可导性/imgs\")",
+      "Read(//Users/liutao/Documents/Obsidian/微积分/第三章极限导论/**)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.1_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.1.1_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.1.1_核心思想配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.1.2_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.1.3_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.1.4_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.1.5_配图.py)"
+    ]
+  }
+}
