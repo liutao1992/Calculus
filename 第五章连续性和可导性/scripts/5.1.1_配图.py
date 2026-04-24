@@ -215,4 +215,48 @@ plt.tight_layout()
 plt.savefig(os.path.join(output_dir, '5.1.1_图2_连续本质.png'), dpi=200, bbox_inches='tight')
 plt.close()
 
+# ========== 图3：分段函数示例 ==========
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# 左半部分：x^2 (x < 1)
+x_left = np.linspace(-0.5, 1, 150)
+y_left = x_left ** 2
+
+# 右半部分：2x (x >= 1)
+x_right = np.linspace(1, 3, 100)
+y_right = 2 * x_right
+
+ax.plot(x_left, y_left, 'b-', linewidth=2.5, label=r'$y = x^2 \ (x < 1)$')
+ax.plot(x_right, y_right, 'r-', linewidth=2.5, label=r'$y = 2x \ (x \geq 1)$')
+
+# 标记分界点 x=1
+ax.plot(1, 1, 'ko', markersize=10, zorder=5)
+ax.annotate('分界点 (1, 1)', xy=(1, 1), textcoords="offset points",
+            xytext=(20, 20), fontsize=12, color='black',
+            arrowprops=dict(arrowstyle='->', color='black'))
+
+# 标记 x=1 竖线
+ax.axvline(1, color='gray', linestyle=':', alpha=0.6)
+ax.text(1.05, 5.5, '$x = 1$', fontsize=11, color='gray')
+
+# 标注两段函数
+ax.text(0.2, 0.7, '$x^2$', fontsize=14, color='blue')
+ax.text(2.2, 4.5, '$2x$', fontsize=14, color='red')
+
+# 设置坐标轴
+ax.set_xlim(-0.8, 3.5)
+ax.set_ylim(-0.5, 7)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+ax.set_title(r'分段函数 $f(x) = x^2 \ (x < 1), \ f(x) = 2x \ (x \geq 1)$',
+             fontsize=14)
+ax.set_xlabel('x', fontsize=12)
+ax.set_ylabel('y', fontsize=12)
+ax.grid(True, alpha=0.3)
+ax.legend(loc='upper left', fontsize=11)
+
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, '5.1.1_图3_分段函数.png'), dpi=200, bbox_inches='tight')
+plt.close()
+
 print("配图生成完成！")
