@@ -34,7 +34,16 @@
       "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3 3.2_配图.py)",
       "Bash(\"/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13\" \"/Users/liutao/Documents/Obsidian/微积分/第三章极限导论/3.2_配图.py\")",
       "Bash(\"/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13\" 3.2_配图.py)",
-      "Skill(commit-commands:commit)"
+      "Skill(commit-commands:commit)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 3.2_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 3.1_案例配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 3.3_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 /Users/liutao/Documents/Obsidian/微积分/第三章极限导论/scripts/3.3_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 3.4_配图.py)",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.2.4_配图.py)",
+      "mcp__MiniMax__web_search",
+      "Bash(/Users/liutao/Documents/Obsidian/微积分/.venv/bin/python3.13 5.3_配图.py)",
+      "Skill(git-commit)"
     ]
   }
 }

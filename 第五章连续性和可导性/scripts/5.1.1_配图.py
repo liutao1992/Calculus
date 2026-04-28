@@ -259,4 +259,53 @@ plt.tight_layout()
 plt.savefig(os.path.join(output_dir, '5.1.1_图3_分段函数.png'), dpi=200, bbox_inches='tight')
 plt.close()
 
+# ========== 图4：|x|/x 的左右极限 ==========
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# 左半部分：|x|/x = -1 (x < 0)
+x_left = np.linspace(-3, -0.01, 200)
+y_left = np.ones_like(x_left) * (-1)
+
+# 右半部分：|x|/x = 1 (x > 0)
+x_right = np.linspace(0.01, 3, 200)
+y_right = np.ones_like(x_right)
+
+ax.plot(x_left, y_left, 'b-', linewidth=2.5)
+ax.plot(x_right, y_right, 'r-', linewidth=2.5)
+
+# 在 x=0 处标记断裂（空心点）
+ax.plot(0, -1, 'bo', markersize=10, fillstyle='none', markeredgewidth=2)
+ax.plot(0, 1, 'ro', markersize=10, fillstyle='none', markeredgewidth=2)
+
+# 标注左右极限
+ax.annotate('左极限 = -1', xy=(0, -1), textcoords="offset points",
+            xytext=(-80, -25), fontsize=12, color='blue',
+            arrowprops=dict(arrowstyle='->', color='blue'))
+ax.annotate('右极限 = 1', xy=(0, 1), textcoords="offset points",
+            xytext=(-70, 15), fontsize=12, color='red',
+            arrowprops=dict(arrowstyle='->', color='red'))
+
+# 标注 x=0 竖线
+ax.axvline(0, color='gray', linestyle=':', alpha=0.6)
+ax.text(0.1, 0.5, '左右不等\n极限不存在', fontsize=11, color='red',
+        bbox=dict(boxstyle='round', facecolor='white', edgecolor='red', alpha=0.8))
+
+# 标注函数值
+ax.text(-2, -0.6, '$y = -1 \\ (x < 0)$', fontsize=12, color='blue')
+ax.text(1.5, 1.3, '$y = 1 \\ (x > 0)$', fontsize=12, color='red')
+
+# 设置坐标轴
+ax.set_xlim(-3.5, 3.5)
+ax.set_ylim(-2, 2)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+ax.set_title(r'$\lim_{x \to 0} \frac{|x|}{x}$  左右极限不相等，极限不存在', fontsize=14)
+ax.set_xlabel('x', fontsize=12)
+ax.set_ylabel('y', fontsize=12)
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, '5.1.1_图4_左右极限不等.png'), dpi=200, bbox_inches='tight')
+plt.close()
+
 print("配图生成完成！")
