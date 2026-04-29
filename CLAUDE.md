@@ -2,6 +2,15 @@
 
 This file provides guidance to Claude Code when working with this repository.
 
+核心原则：
+1. 按章节隔离资源（imgs/scripts）
+2. 永远使用 .venv/bin/python3.13
+3. 先 cd 到脚本目录再运行
+4. 配图必须使用 matplotlib 且必须兼容中文
+5. 禁止使用 LaTeX cases 环境
+6. 所有输出必须可直接用于 Obsidian
+
+
 # 项目定位（最高优先级）
 
 这是一个 **Obsidian 微积分个人知识库项目**，核心目标不是传统软件开发，而是构建一个：
