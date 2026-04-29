@@ -512,7 +512,72 @@ f(x)=x+2\ (x\neq2),\ f(2)=0
 
 ---
 
-# 十三、标注规则
+# 十三、LaTeX 在 Obsidian 中的渲染规则
+
+## 禁止在代码块中使用 LaTeX
+
+Obsidian 的代码块（```...```）中不会渲染 LaTeX 数学公式，$...$ 和 $$...$$ 会原样显示。
+
+### 错误：
+
+```markdown
+```
+固定点 a：  f'(a) = lim_{h→0} [f(a+h) - f(a)] / h
+               ↓ 把 a 换成变量 x
+变量 x：    f'(x) = lim_{h→0} [f(x+h) - f(x)] / h
+```
+```
+
+### 正确：
+
+将公式放在代码块外，使用标准 LaTeX：
+
+```markdown
+$$
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+$$
+```
+
+### 原则：
+
+- 需要渲染的数学公式**必须**放在代码块外
+- 代码块仅用于：文件路径、命令行、纯文本示意图、Python 代码
+- 知识地图等树状结构如需含公式，应使用 Markdown 列表而非代码块
+
+---
+
+## 禁止在 `<details>` 中使用 LaTeX
+
+Obsidian 的 HTML `<details>` 折叠块内不会渲染 LaTeX 数学公式。
+
+### 错误：
+
+```markdown
+<details>
+<summary>点击查看答案</summary>
+
+$f'(x) = 2x$
+
+</details>
+```
+
+### 正确：
+
+使用 Obsidian 折叠 callout：
+
+```markdown
+> [!faq]- 点击查看答案
+> $f'(x) = 2x$
+```
+
+### 原则：
+
+- 自测题等需要折叠的答案**必须**使用 `> [!faq]-` callout
+- `<details>` 仅用于不含 LaTeX 的纯文本内容
+
+---
+
+# 十四、标注规则
 
 ## 推荐：
 
