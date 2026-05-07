@@ -488,6 +488,42 @@ family='Courier'
 
 ---
 
+### mathtext 与字体冲突（新增硬规则）
+
+当配图需要同时显示**中文**和**数学公式（LaTeX/mathtext）**时，全局 `font.family` 设置会与 matplotlib 内置的 mathtext 引擎冲突，导致数学公式无法渲染。
+
+#### 错误做法（会导致公式失效）：
+
+```python
+plt.rcParams['font.family'] = ['Hiragino Sans GB', 'sans-serif']
+plt.rcParams['axes.unicode_minus'] = False
+```
+
+#### 正确做法（中文 + 公式并存）：
+
+```python
+# 只设置 sans-serif 列表，不覆盖 font.family
+plt.rcParams['font.sans-serif'] = ['Hiragino Sans GB', 'DejaVu Sans', 'Arial Unicode MS']
+plt.rcParams['axes.unicode_minus'] = False
+```
+
+#### 数学公式写法：
+
+```python
+# 正确：直接用 $ 包裹，不要转义
+ax.plot(x, x**2, label='$f(x) = x^2$')
+ax.set_title("$f'(x) = 2x$")
+
+# 错误：加了反斜杠转义，mathtext 不识别
+ax.plot(x, x**2, label=r'\$f(x) = x^2\$')  # 会原样显示文本
+```
+
+#### 特殊符号注意：
+
+Hiragino Sans GB 不支持 ✓、✗ 等特殊符号，配图中的标注应改用普通文字（如"可导/不可导"），避免字体缺失导致方框或空白。
+
+---
+
 # 十二、LaTeX 规则（matplotlib）
 
 # 禁止：
